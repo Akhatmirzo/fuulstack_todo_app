@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <a href="/" class="back__page">Back</a>
+
+    <section class="wrapper">
+        <div class="form signup">
+            <header>Signup</header>
+            <form >
+                <br>
+                <br>
+                <input type="text" placeholder="Username" required />
+                <input type="password" placeholder="Password" required />
+                <input type="submit" value="Signup" />
+            </form>
+        </div>
+
+        <div class="form login">
+            <header>Login</header>
+            <form >
+                <input type="text" placeholder="Username" required />
+                <input type="password" placeholder="Password" required />
+                <a href="#">Forgot password?</a>
+                <input type="submit" value="Login" />
+            </form>
+        </div>
+
+        <script>
+            const wrapper = document.querySelector(".wrapper"),
+                signupHeader = document.querySelector(".signup header"),
+                loginHeader = document.querySelector(".login header");
+
+            loginHeader.addEventListener("click", () => {
+                wrapper.classList.add("active");
+            });
+            signupHeader.addEventListener("click", () => {
+                wrapper.classList.remove("active");
+            });
+        </script>
+    </section>
+</body>
+
+</html>
